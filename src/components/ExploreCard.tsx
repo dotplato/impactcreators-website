@@ -28,11 +28,13 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
   
   return (
     <motion.div
-      className={`relative flex-shrink-0 ${
-        active === id ? "lg:w-[400px] w-[300px]" : "lg:w-[200px] w-[200px]"
+      className={`relative w-full ${
+        active === id ? "h-[520px]" : "h-[300px]"
+      } sm:h-[600px] ${
+        active === id ? "sm:w-[300px] lg:w-[400px]" : "sm:w-[200px] lg:w-[200px]"
       } ${
         styles.flexCenter
-      } min-w-[170px] h-[600px] transition-all duration-[0.7s] ease-out cursor-pointer`}
+      } transition-all duration-[0.7s] ease-out cursor-pointer shrink-0`}
       onClick={() => handleClick(id)}
     >
       <Image
@@ -41,7 +43,7 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
         className="absolute w-full h-full object-cover rounded-[24px]"
       />
       {active !== id ? (
-        <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-10 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] ">
+        <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-10 bottom-4 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] ">
           {title}
         </h3>
       ) : (

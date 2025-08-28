@@ -24,9 +24,8 @@ const Explore = () => {
       >
         <SectionTitle title="Services." classes="px-[6vw] md:px-[3vw] pt-[3vw] z-10" />
 
-        
-   
-        <div className="mt-[50px] flex flex-row min-h-[70vh] gap-6 overflow-hidden w-full justify-center">
+        {/* Column layout on small screens, row on larger */}
+        <div className="mt-[50px] flex flex-col sm:flex-row sm:min-h-[70vh] gap-6 w-full justify-center">
           {services.map((world, index) => {
             console.log("Rendering world", world, { index, active: activeCard });
             return (
