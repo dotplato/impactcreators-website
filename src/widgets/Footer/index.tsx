@@ -69,7 +69,7 @@ export function Footer() {
         variants={containerVariants}
       >
         {/* Logo and Description */}
-        <div className="mb-10 flex  items-start  justify-between space-y-4 md:mb-16 md:flex-row md:items-center md:justify-between md:space-y-0">
+        <div className="mb-10 flex flex-wrap  flex-col  items-start  justify-between space-y-4 sm:mb-16 sm:flex-row sn:items-center sm:justify-between sm:space-y-0">
           <motion.div variants={itemVariants} className="flex  items-center">
             <div className="relative w-72 ">
               <Image
@@ -84,7 +84,7 @@ export function Footer() {
           </motion.div>
           <motion.div
             variants={itemVariants}
-            className="max-w-md text-left text-sm text-muted-foreground md:text-right md:text-base"
+            className="max-w-md text-left sm:text-right text-sm text-muted-foreground  sm:text-base"
           >
              ImpactCreators is a modern  group of highly talented people driving growth through social media and performance marketing, with a sharp edge in celebrity management. Blending strategy, creativity, and influence, we turn brands into movements.
           </motion.div>

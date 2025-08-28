@@ -56,15 +56,15 @@ export default function Home() {
           <ShadowCursor />
 
       <Navigation />
-      <div className='relative'>
+      <div className='relative overflow-hidden md:overflow-visible'>
       <Hero />
-      <div className='feedback-gradient'/>
+      <div className='feedback-gradient pointer-events-none' aria-hidden="true"/>
       </div>
 
-      <div className='relative'>
+      <div className='relative overflow-hidden md:overflow-visible'>
 
       <About />
-      <div className='gradient-04'/>
+      <div className='gradient-04 pointer-events-none' aria-hidden="true"/>
       </div>
    
      <TextSlideEffect />
@@ -72,26 +72,26 @@ export default function Home() {
 
       <Explore/>
 
-      <div className='relative'>
+      <div className='relative overflow-hidden md:overflow-visible'>
 
       <ProjectsSection projects={projects.map(project => ({
         ...project,
         status: project.status as "live" | "coming soon"
       }))} />
-      <div className='gradient-02'/>
+      <div className='gradient-02 pointer-events-none' aria-hidden="true"/>
       </div>
 
-      <div className='relative'>
+      <div className='relative overflow-hidden md:overflow-visible'>
 
       <Testimonials/>
-      <div className='gradient-03'/>
+      <div className='gradient-03 pointer-events-none' aria-hidden="true"/>
       </div>
 
-      <div className='relative'>
+      <div className='relative overflow-hidden md:overflow-visible'>
 
 <CalltoAction/>
 <Footer/>
-<div className='footer-gradient'/>
+<div className='footer-gradient pointer-events-none' aria-hidden="true"/>
       </div>
       {/* disable cursor here */}
     

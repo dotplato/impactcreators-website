@@ -116,7 +116,7 @@ const ScrollableImage = ({ src, alt }: { src: string; alt: string }) => {
         animate={{ opacity: reachedBottom ? 0 : 0.7 }}
       />
 
-      {/* Scroll hint - shows more prominently when hovering */}
+      {/* Scroll hint - shows more prominently when  */}
       <motion.div
         className="pointer-events-none absolute right-3 top-3 flex items-center gap-1 rounded-full bg-black/20 px-2 py-1 text-xs text-white/60 backdrop-blur-sm"
         animate={{
@@ -189,7 +189,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
     >
       <div className="mb-8 text-center"       id="products" 
       >
-        <h3 className="mb-4 text-8xl font-bold tracking-tight text-foreground">
+        <h3 className="mb-4 text-6xl sm:text-8xl font-bold tracking-tight text-foreground">
          Our Products
         </h3>
         <p className="mx-auto max-w-2xl px-4 text-sm text-muted-foreground sm:text-base">
@@ -203,7 +203,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
           key={index}
           className="mx-auto mb-12 mt-48 pl-8 relative rounded-3xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900 overflow-hidden"
         >
-            <div className="gradient-03"/>
+            <div className="gradient-03 pointer-events-none -z-10"/>
           <div className="overflow-hidden  ">
             <div className="hidden sm:grid sm:grid-cols-2 gap-8">
               {/* Content Side (Left) */}

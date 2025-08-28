@@ -17,6 +17,7 @@ html,
 body {
   font-family:'Lexend', sans-serif;
   @apply text-text-1 bg-slate-950; 
+  overflow-x: hidden;
 }
 
 html {
@@ -117,7 +118,7 @@ option {
   width: 200px;
   height: 438px;
   top: 0px;
-  right: 0px;
+  left: 0px;
 
   background: #7aebfb;
   filter: blur(190px);
@@ -176,11 +177,47 @@ option {
 
 .footer-gradient {
   position: absolute;
-  width: 500px;
+  width: 300px;
   height: 100px;
   left: 37%;
   bottom: 0;
 
   background: #65c4fa;
   filter: blur(150px);
+}
+
+@media (max-width: 768px) {
+  .gradient-02 {
+    width: 120px;
+    height: 260px;
+    left: -40px;
+    filter: blur(140px);
+  }
+  .gradient-03 {
+    width: 240px;
+    height: 420px;
+    left: 10%;
+    top: 10%;
+    filter: blur(140px);
+  }
+  .gradient-04 {
+    width: 200px;
+    height: 60vh;
+    left: 20%;
+    top: 15%;
+    filter: blur(160px);
+  }
+  .feedback-gradient {
+    width: 140px;
+    height: 220px;
+    left: -30px;
+    top: 10px;
+    filter: blur(130px);
+  }
+  .footer-gradient {
+    width: 260px;
+    height: 80px;
+    left: 20%;
+    filter: blur(120px);
+  }
 }
