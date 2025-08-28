@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import SectionTitle from '@/components/ui/SectionTitle';
 import SectionOpacity from '@/components/ui/SectionOpacity';
+import Image from 'next/image';
 
 interface Props {}
 
@@ -17,7 +18,7 @@ const Index: FC<Props> = () => {
             </p>
 
             <div className="relative h-[20vw] w-[30vw] md:h-[40vw] rounded-3xl md:max-w-[90%] md:text-center grow-[3] md:w-full basis-0 md:basis-[initial]  bg-bg-2">
-              <img src="/about.png" alt="hands image" className="inline-block md:object-cover rounded-3xl  hover:brightness-110 transition absolute inset-0 w-full h-full" />;
+              <Image width={300} height={300} src="/about.png" alt="hands image" className="inline-block md:object-cover rounded-3xl  hover:brightness-110 transition absolute inset-0 w-full h-full" />;
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import {
   useTransform,
 } from "framer-motion"
 import { Check, Zap, Utensils, ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 
 // Define the project prop type
 interface Project {

@@ -41,7 +41,7 @@ const TestimonialCard: FC<Props> = ({ card: { name, testimonial, rating, number,
         </div>
         <div className="relative flex-1">
           <p className="relative z-[2000] line-clamp-4 text-[1.5vw] md:text-[3vw] font-medium leading-[1.7] md:text-balance md:leading-[1.5] md:mt-[3vw]">
-            "{testimonial}"
+            {testimonial}
           </p>
           <div className="absolute right-[6vw] top-[1.8vw] z-[1] text-right text-[16vw] font-extrabold tracking-[5%] text-blue-900/50 md:text-[28vw] md:top-0">
             {number}

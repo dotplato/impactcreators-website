@@ -20,7 +20,7 @@ const Index: FC<Props> = () => {
       <div className=" mx-auto flex w-full max-w-[60vw] md:max-w-[90%] flex-1 flex-col items-center justify-center text-center">
         <h3 className="text-[4vw] md:text-[8vw] font-medium">Not Sure Yet?</h3>
         <p className="mt-[0.6vw] text-[1.7vw] md:text-[3.2vw] font-normal text-gray-300 md:leading-[1.3]">
-        If you're not sure about your project yet, you can either get a quote or contact us directly here.
+        If you&apos;re not sure about your project yet, you can either get a quote or contact us directly here.
 
         </p>
         <Link
