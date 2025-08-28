@@ -62,37 +62,31 @@ export function Footer() {
       <div className="pointer-events-none absolute inset-x-0 top-0rounded-3xl h-32 bg-gradient-to-b from-slate-950/90  to-transparent"></div>
 
       <motion.div
-        className="relative mx-auto w-full px-6 py-12 sm:px-8 md:max-w-[90%] md:px-10 md:py-16 lg:px-12"
+        className="relative mx-auto w-full  px-6 py-12 sm:px-8 md:max-w-[90%] md:px-10 md:py-16 lg:px-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         {/* Logo and Description */}
-        <div className="mb-10 flex items-start justify-between space-y-4 md:mb-16 md:flex-row md:items-center md:justify-between md:space-y-0">
-          <motion.div variants={itemVariants} className="flex items-center">
-            <div className="relative h-8 w-8 md:h-10 md:w-10">
+        <div className="mb-10 flex  items-start  justify-between space-y-4 md:mb-16 md:flex-row md:items-center md:justify-between md:space-y-0">
+          <motion.div variants={itemVariants} className="flex  items-center">
+            <div className="relative w-72 ">
               <Image
-                src="/logo.svg"
+                src="/logos/7-01.svg"
                 alt="ImpactCreators Logo"
-                fill
-                className="object-contain"
+                height={300}
+                width={300}
+                className=""
               />
             </div>
-            <h2
-              className="ml-3 text-lg font-bold text-foreground md:text-xl"
-      
-            >
-ImpactCreators
-            </h2>
+           
           </motion.div>
           <motion.div
             variants={itemVariants}
             className="max-w-md text-left text-sm text-muted-foreground md:text-right md:text-base"
           >
-            Cadogy is a web development agency in Pompano Beach, FL, crafting
-            custom websites, fullstack apps, and secure infrastructure that help
-            businesses grow online.
+             ImpactCreators is a modern  group of highly talented people driving growth through social media and performance marketing, with a sharp edge in celebrity management. Blending strategy, creativity, and influence, we turn brands into movements.
           </motion.div>
         </div>
 

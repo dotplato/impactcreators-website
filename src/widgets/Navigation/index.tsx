@@ -3,12 +3,13 @@ import { FC, useEffect, useState } from 'react';
 
 import SidebarMenu from '@/components/SidebarMenu';
 import { AnimatePresence } from 'framer-motion';
-import { LogoIcon } from '@/icons/ApproachIcons/LogoIcon';
+import Image from 'next/image';
 
 interface Props {}
 
 const Index: FC<Props> = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const closeSidebar = () => setIsActive(false);
 
   useEffect(() => {
@@ -19,6 +20,26 @@ const Index: FC<Props> = () => {
     document.addEventListener("keydown", handleEscape);
     return () => {
       document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 0);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Set initial state in case page loads scrolled
+    setIsScrolled(typeof window !== 'undefined' ? window.scrollY > 0 : false);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll as EventListener);
     };
   }, []);
   return (
@@ -32,9 +53,25 @@ const Index: FC<Props> = () => {
         </button>
       </div>
       <button title="your_agency_name" className="p-[2vw] fixed z-[100] top-0 left-0 group">
-
-        <LogoIcon className="w-[5vw] h-[5vw] group-hover:text-white/80 transition duration-300" />
-       
+        <div className="relative w-[15vw] h-auto">
+          {/* Default logo (top of page) */}
+          <Image
+            src="/logos/7-01.svg"
+            alt="logo default"
+            width={200}
+            height={200}
+            className={`w-[15vw] transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
+            priority
+          />
+          {/* Scrolled logo */}
+          <Image
+            src="/logos/blue-logo-white.png"
+            alt="logo scrolled"
+            width={200}
+            height={200}
+            className={`w-[15vw] absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
+          />
+        </div>
       </button>
       <AnimatePresence mode="wait">{isActive && (
         <SidebarMenu close={closeSidebar} />

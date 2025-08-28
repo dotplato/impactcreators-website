@@ -14,7 +14,7 @@ import ShadowCursor from '@/components/ui/ShadowCursor'
 
 import { Explore } from '@/components'
 import ProjectsSection from '@/components/ProjectsSection';
-
+import CalltoAction from '@/widgets/CallToAction';
 const projects = [
   {
     title: "OrderImpact",
@@ -89,6 +89,7 @@ export default function Home() {
 
       <div className='relative'>
 
+<CalltoAction/>
 <Footer/>
 <div className='footer-gradient'/>
       </div>

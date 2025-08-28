@@ -1,4 +1,3 @@
-import { First, Second, Third, Fourth, Fifth } from '@/icons/ApproachIcons';
 import Service_1 from "../../public/service1.png";
 import Service_2 from "../../public/service2.png";
 import Service_3 from "../../public/service3.png";
@@ -88,37 +87,7 @@ export const TESTIMONIAL_CARDS = [
   },
 ];
 
-export const APPROACH_CARDS = [
-  {
-    icon: First,
-    title: 'Consultation',
-    description:
-      "We listen carefully to the customer's wishes and ideas about the project. Then we share our vision and, based on this exchange, come to a common agreement.",
-  },
-  {
-    icon: Second,
-    title: 'Joint review',
-    description:
-      'Then we start creating the design. After completion, we conduct a joint review, where the customer, if desired, can make changes.',
-  },
-  {
-    icon: Third,
-    title: 'Development',
-    description: 'After the design is approved, we proceed to the actual development of the product.',
-  },
-  {
-    icon: Fourth,
-    title: 'Testing',
-    description:
-      'Once the development is complete, we thoroughly test each component of the product. Then we invite the customer for user testing.',
-  },
-  {
-    icon: Fifth,
-    title: 'Final result',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates laboriosam ad eius, culpa soluta ab. Beatae optio quas adipisci aliquam quia velit soluta iste dicta, modi tenetur magnam, aut laborum placeat est. Unde minima amet illo eveniet qui sunt omnis laudantium laboriosam, officia dignissimos molestias tempore velit. Provident, explicabo. Dolor.',
-  },
-];
+
 
 export const RADIO_FIELDS = [
   {

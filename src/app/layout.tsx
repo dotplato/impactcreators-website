@@ -2,8 +2,9 @@
 
 import Lenis from 'lenis';
 
-import {Lexend  } from 'next/font/google';
+import { Lexend } from 'next/font/google';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 const montserrat = Lexend({ subsets: ['latin'] });
 
@@ -36,6 +37,14 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="ru">
+      <Head>
+        <title>Impact Creators | where brands are made</title>
+        <meta
+          name="description"
+          content=" ImpactCreators is a modern  group of highly talented people driving growth through social media and performance marketing, with a sharp edge in celebrity management. Blending strategy, creativity, and influence, we turn brands into movements."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <body className={montserrat.className}>
         <main>
           {children}
