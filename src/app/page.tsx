@@ -56,8 +56,10 @@ export default function Home() {
           <ShadowCursor />
 
       <Navigation />
-      <div className='relative overflow-hidden md:overflow-visible'>
       <Hero />
+
+      <div className='relative overflow-hidden md:overflow-visible'>
+
       <div className='feedback-gradient pointer-events-none' aria-hidden="true"/>
       </div>
 

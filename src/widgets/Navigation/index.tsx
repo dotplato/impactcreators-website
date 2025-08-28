@@ -48,28 +48,28 @@ const Index: FC<Props> = () => {
         <button
           type="button"
           onClick={() => setIsActive(!isActive)}
-          className="flex h-[4.5vw] w-[4.5vw] cursor-pointer items-center justify-center  rounded-full bg-sky-600">
+          className="flex h-[4.5vw] w-[4.5vw] min-h-10 min-w-10 cursor-pointer items-center justify-center  rounded-full bg-sky-600">
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>
       </div>
       <button title="your_agency_name" className="p-[2vw] fixed z-[100] top-0 left-0 group">
-        <div className="relative w-[15vw] h-auto">
+        <div className="relative w-[15vw] min-w-32 h-auto">
           {/* Default logo (top of page) */}
           <Image
             src="/logos/7-01.svg"
             alt="logo default"
-            width={200}
-            height={200}
-            className={`w-[15vw] transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
+            width={500}
+            height={500}
+            className={` transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
             priority
           />
           {/* Scrolled logo */}
           <Image
             src="/logos/blue-logo-white.png"
             alt="logo scrolled"
-            width={200}
-            height={200}
-            className={`w-[15vw] absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
+            width={500}
+            height={500}
+            className={`absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
           />
         </div>
       </button>

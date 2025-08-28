@@ -180,14 +180,14 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 
   return (
     <motion.div
-      className="my-24  lg:my-48 px-[6vw]"
+      className="mt-12 mb-32  lg:my-48 px-[6vw]"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
       id="products" 
     >
-      <div className="mb-8 text-center"       id="products" 
+      <div className="mb-4 text-center"       id="products" 
       >
         <h3 className="mb-4 text-6xl sm:text-8xl font-bold tracking-tight text-foreground">
          Our Products
@@ -201,10 +201,11 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="mx-auto mb-12 mt-48 pl-8 relative rounded-3xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900 overflow-hidden"
+          className="mx-auto mb-12 mt-16 pl-8 relative rounded-3xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900 overflow-hidden"
         >
             <div className="gradient-03 pointer-events-none -z-10"/>
-          <div className="overflow-hidden  ">
+          <div className="overflow-hidden">
+            {/* Desktop layout */}
             <div className="hidden sm:grid sm:grid-cols-2 gap-8">
               {/* Content Side (Left) */}
               <div className=" flex flex-col justify-around h-[90vh] max-h-[980px]">
@@ -296,6 +297,40 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                   <div className="pointer-events-none absolute bottom-1/3 left-1/4 h-20 w-20 rounded-full bg-blue-500/10 blur-xl filter"></div>
                 </div>
               </div>
+            </div>
+            
+            {/* Mobile layout */}
+            <div className="sm:hidden flex flex-col gap-6 p-4">
+              <div>
+                <div className="mb-2 flex items-center">
+                  {project.icon || <Utensils className="mr-2 h-6 w-6 text-sky-500" />}
+                </div>
+                <h4 className="mb-2 text-3xl font-bold text-foreground">{project.title}</h4>
+                <p className="mb-4 text-sm text-muted-foreground">{project.description}</p>
+                <div className={`mb-4 inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-medium ${
+                  project.status === "live"
+                    ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                    : "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400"
+                }`}>
+                  <Zap className="mr-1 h-3 w-3" />
+                  <span>{project.status === "live" ? "Live" : "Under Development"}</span>
+                </div>
+              </div>
+              <div className="relative h-64 w-full overflow-hidden rounded-xl">
+                <ScrollableImage src={project.imageUrl} alt={`${project.title} project preview`} />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
+              </div>
+              {project.link && (
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 border border-1 rounded-full items-center justify-center px-4 text-sm z-[1] font-medium text-primary-foreground transition-colors hover:bg-sky-500/10 disabled:pointer-events-none disabled:opacity-50"
+                >
+                  <ArrowUpRight className="mr-2" />
+                  <span>View Project</span>
+                </Link>
+              )}
             </div>
           </div>
         </div>

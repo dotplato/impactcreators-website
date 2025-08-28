@@ -62,7 +62,7 @@ export function Footer() {
       <div className="pointer-events-none absolute inset-x-0 top-0rounded-3xl h-32 bg-gradient-to-b from-slate-950/90  to-transparent"></div>
 
       <motion.div
-        className="relative mx-auto w-full  px-6 py-12 sm:px-8 md:max-w-[90%] md:px-10 md:py-16 lg:px-12"
+        className="relative mx-auto w-full  px-6 py-12  md:py-16 lg:px-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}

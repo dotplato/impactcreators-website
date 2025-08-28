@@ -9,7 +9,7 @@ import { services } from "../data/index"
 import SectionTitle from '@/components/ui/SectionTitle';
 
 const Explore = () => {
-  const [activeCard, setActiveCard] = useState("world-3");
+  const [activeCard, setActiveCard] = useState("world-1");
   
   console.log("services rendered", { activeCard, services });
   

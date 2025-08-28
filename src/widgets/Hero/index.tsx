@@ -52,10 +52,10 @@ export default function ScrollCarousel() {
   return (
     <section ref={containerRef} className="relative h-[300vh]">
       {/* sticky wrapper keeps the carousel fixed until scroll completes */}
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+      <div className="sticky top-[0px] mt-0 h-screen flex items-center overflow-hidden">
         <motion.div
           style={{ x }}
-          className="flex gap-6 px-12 w-full h-[90vh] items-center"
+          className="flex gap-6 px-4 w-full h-[90vh] items-center"
         >
           {slides.map((slide) => (
             <div
@@ -70,7 +70,7 @@ export default function ScrollCarousel() {
                 priority
               />
               <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white p-6">
-                <h1 className="text-8xl md:text-4xl font-bold mb-4 max-w-2xl">
+                <h1 className="text-8xl md:text-5xl font-bold mb-4 max-w-2xl">
                   {slide.title}
                 </h1>
                 <p className="text-base md:text-lg mb-6 max-w-xl opacity-70">
