@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowUpRight, Github, Linkedin, Youtube } from "lucide-react"
+import { ArrowUpRight, Github, Linkedin, Youtube, Instagram } from "lucide-react"
 
 
 // Animation variants
@@ -297,7 +297,7 @@ export function Footer() {
           {/* Social Icons */}
           <div className="flex items-center space-x-6">
             <motion.a
-              href="https://x.com/Cadogy"
+              href="https://x.com/Impactxcreators"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition hover:text-foreground"
@@ -319,6 +319,19 @@ export function Footer() {
                   d="M13.158 2.058h2.248l-4.913 5.435 5.78 7.395h-4.525l-3.545-4.485-4.056 4.485h-2.25l5.255-5.813-5.545-7.017h4.64l3.205 4.1 3.706-4.1Zm-.79 11.527h1.246L5.57 3.293H4.233l8.135 10.292Z"
                 />
               </svg>
+            </motion.a>
+            <motion.a
+              href="https://www.instagram.com/impactxcreators"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition hover:text-foreground"
+              aria-label="Instagram"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && e.currentTarget.click()}
+              variants={socialIconVariants}
+              whileHover="hover"
+            >
+              <Instagram className="h-5 w-5 md:h-6 md:w-6" />
             </motion.a>
             {/* <motion.a
               href="https://www.youtube.com/Cadogy"
@@ -345,7 +358,7 @@ export function Footer() {
               </svg>
             </motion.a> */}
             <motion.a
-              href="https://www.linkedin.com/company/Cadogy"
+              href="https://www.linkedin.com/company/Impactxcreators"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition hover:text-foreground"

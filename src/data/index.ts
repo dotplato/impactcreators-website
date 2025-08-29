@@ -179,7 +179,7 @@ export const services = [
   {
     id: "world-4",
     imgUrl: Service_4,
-    title: "Web Design and Development",
+    title: "Content Creation",
   },
   {
     id: "world-5",

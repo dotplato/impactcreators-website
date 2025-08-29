@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../shared/styles";
 import { staggerContainer } from "../shared/utils/animations";
-import { TypingText, TitleText } from "../components/index";
 import ExploreCard from "./ExploreCard";
 import { services } from "../data/index"
 import SectionTitle from '@/components/ui/SectionTitle';
