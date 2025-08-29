@@ -15,7 +15,8 @@ export default function ContactPage() {
 		setIsSubmitting(true)
 		setMessage(null)
 
-		const formData = new FormData(e.currentTarget)
+		const formEl = e.currentTarget
+		const formData = new FormData(formEl)
 		const payload: Record<string, string | string[]> = {}
 		formData.forEach((value, key) => {
 			const existing = payload[key]
@@ -42,7 +43,7 @@ export default function ContactPage() {
 			}
 
 			setMessage("Sent! We'll get back to you shortly.")
-			e.currentTarget.reset()
+			formEl.reset()
 		} catch (err: any) {
 			setMessage(err?.message || "Something went wrong. Please try again.")
 		} finally {
